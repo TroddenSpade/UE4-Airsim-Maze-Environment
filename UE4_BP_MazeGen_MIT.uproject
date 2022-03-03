@@ -1,13 +1,16 @@
 {
 	"FileVersion": 3,
-	"EngineAssociation": "4.25",
+	"EngineAssociation": "4.26",
 	"Category": "",
 	"Description": "",
 	"Modules": [
 		{
 			"Name": "UE4_BP_MazeGen_MIT",
 			"Type": "Runtime",
-			"LoadingPhase": "Default"
+			"LoadingPhase": "Default",
+            "AdditionalDependencies": [
+                "AirSim"
+            ]
 		},
 		{
 			"Name": "MazeGenEditor",
@@ -18,5 +21,15 @@
 				"Engine"
 			]
 		}
-	]
+	],
+    "TargetPlatforms": [
+        "MacNoEditor",
+        "WindowsNoEditor"
+    ],
+    "Plugins": [
+        {
+            "Name": "AirSim",
+            "Enabled": true
+        }
+    ]
 }
